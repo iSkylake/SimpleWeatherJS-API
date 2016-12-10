@@ -8,9 +8,7 @@ var options = {
 	cert : fs.readFileSync('./certificates/server.crt')
 };
 
-app.get('/', function (req, res) {
-   res.send('Hello World!');
-});
+app.use(express.static('public'));
 
 https.createServer(options, app).listen(3000, function(){
 	console.log('Server Started');
