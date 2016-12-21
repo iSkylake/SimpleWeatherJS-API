@@ -1,3 +1,3 @@
 # SimpleWeatherJS-API
 
-Weather App using SimpleWeatherJS API and ReactJS.
+Weather App using SimpleWeatherJS API ~~and ReactJS.~~
