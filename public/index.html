@@ -8,7 +8,11 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script> -->
 </head>
 <body>
-	<div id="weather"></div>
+	<div>
+		<input type="text" id="search" placeholder="location">
+		<button onclick="searchFunc()">Search</button>
+		<div id="weather"></div>
+	</div>
 	<!-- <div id="app"></div> -->
 
 	<!-- <script type="text/babel" src="app.jsx"></script> -->
@@ -17,5 +21,25 @@
 	<script type="text/javascript" src="./javascript/lib/jquery.simpleWeather.min.js"></script>
 <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script> -->
 	<script type="text/javascript" src="./javascript/main.js"></script>
+
+	<script type="text/javascript">
+	function searchFunc(){
+		var location = document.getElementById("search").value;
+		console.log(location);
+		$.simpleWeather({
+			location: location,
+			woeid: '',
+			unit: 'f',
+			success: function(weather){
+				html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
+				$("#weather").html(html);
+			},
+			error: function(error){
+				$('#weather').html('<p>' + error + '</p>');
+			}
+		});
+	}
+	</script>
+
 </body>
 </html>
