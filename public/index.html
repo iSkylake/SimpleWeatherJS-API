@@ -3,6 +3,7 @@
 <head>
 	<title>Weather App</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
 <!-- 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script> -->
@@ -35,7 +36,11 @@
 				$("#weather").html(html);
 
 				for(var i=0; i<weather.forecast.length; i++){
-					html += '<p>' + weather.forecast[i].day + ':' + weather.forecast[i].high + '</p>';
+
+					// html += '<p>' + weather.forecast[i].day + ':' + weather.forecast[i].high + '</p>';
+					// htmt += '<p><i class="icon-' + weather.code +'"></i>';
+					html += '<h2><img class="weather-icon" src="img/weathericons/'+weather.forecast[i].code+'.svg"></img> '+weather.forecast[i].high+'&deg;'+weather.units.temp+'</h2>';
+					// html = '<img class="weathericon" src="images/weathericons/'+weather.code+'.svg">';
 				}
 				$('#weather').html(html);
 			},

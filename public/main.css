@@ -1,0 +1,10 @@
+.weather-icon {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 1.226993865%;
+  z-index: 5;
+  width: 50px;
+  height: auto;
+  overflow: hidden;
+}
