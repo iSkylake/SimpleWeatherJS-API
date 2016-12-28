@@ -32,8 +32,10 @@
 			woeid: '',
 			unit: 'f',
 			success: function(weather){
-				html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
-				$("#weather").html(html);
+				// html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
+				// $("#weather").html(html);
+
+				html = '<h2><img class="weather-icon" src="img/weathericons/'+weather.code+'.svg"></img> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 
 				for(var i=0; i<weather.forecast.length; i++){
 
