@@ -10,13 +10,13 @@ $(document).ready(function(){
 				// html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
 				// $("#weather").html(html);
 
-				html = '<h2><img class="weather-icon" src="img/weathericons/'+weather.code+'.svg"></img> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+				html = '<div class="weather"><div><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2></div>'+'<div><img class="weather-icon" src="img/weathericons/'+weather.code+'.svg"></img></div></div>';
 
 				for(var i=0; i<weather.forecast.length; i++){
 
 					// html += '<p>' + weather.forecast[i].day + ':' + weather.forecast[i].high + '</p>';
 					// htmt += '<p><i class="icon-' + weather.code +'"></i>';
-					html += '<h2><img class="weather-icon" src="img/weathericons/'+weather.forecast[i].code+'.svg"></img> '+weather.forecast[i].high+'&deg;'+weather.units.temp+'</h2>';
+					html += '<div><div><h2>'+weather.forecast[i].high+'&deg;'+weather.units.temp+'</h2></div>'+'<div><img class="weather-icon" src="img/weathericons/'+weather.forecast[i].code+'.svg"></img></div></div>';
 					// html = '<img class="weathericon" src="images/weathericons/'+weather.code+'.svg">';
 				}
 				$('#weather').html(html);
