@@ -8,8 +8,10 @@
 .temperature{
 	font-size: 40px;
 	vertical-align: center;
+	display: inline-block;
 }
 
 .weather-icon{
-	top: 50%;
+	top: 45px;
+	position: absolute;
 }
