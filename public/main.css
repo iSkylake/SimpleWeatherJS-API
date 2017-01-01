@@ -1,17 +1,22 @@
 .weather{
 	border: 5px solid #000;
-	width: 150px;
+	width: 200px;
 	border-radius: 10px;
 	display: flex;
+	margin-top: 20px;
 }
 
 .temperature{
 	font-size: 40px;
 	vertical-align: center;
 	display: inline-block;
+	background-color: #000;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .weather-icon{
-	top: 45px;
-	position: absolute;
+	top: 10px;
+	position: relative;
 }
