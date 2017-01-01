@@ -3,7 +3,7 @@
 	width: 200px;
 	border-radius: 10px;
 	display: flex;
-	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .temperature{
@@ -19,4 +19,8 @@
 .weather-icon{
 	top: 10px;
 	position: relative;
+}
+
+.date{
+	font-weight: 700;
 }
