@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	$("#searchButton").click(function(){
 		var location = $("#searchInput").val();
-		console.log(location);
 		$.simpleWeather({
 			location: location,
 			woeid: '',
